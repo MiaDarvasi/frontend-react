@@ -1,0 +1,26 @@
+button {
+	border: none;
+	background: linear-gradient(to right, $clr1, $clr3 );
+	color: whitesmoke;
+	padding: 0.5rem 1rem;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+form>* {
+	display: block;
+	// width: 200px;
+	margin: 10px 0px;
+}
+
+.btn-link {
+	border: 0;
+	background-color: transparent;
+	// text-decoration: underline;
+	transition: 0.5s;
+}
+
+.btn-link:hover {
+	background-color: $clr1;
+}

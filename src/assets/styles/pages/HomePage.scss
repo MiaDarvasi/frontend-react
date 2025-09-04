@@ -1,0 +1,50 @@
+.home-page {
+    margin-block-start: 3rem;
+    color: $gray4;
+
+    h1 {
+        display: flex;
+        place-items: center;
+        gap: 0.7rem;
+        font-family: 'noto-med';
+        font-size: 2.2rem;
+
+        img {
+            max-height: 2rem;
+            transform: rotate(-20deg);
+        }
+    }
+
+    h2 {
+        font-family: 'noto-thin';
+        font-size: 1.2rem;
+    }
+
+    .add-btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+
+        font-weight: lighter;
+        font-size: 1.2rem;
+        font-family: 'noto-light';
+
+        margin-block: 1rem;
+
+        img {
+            max-height: 1rem;
+            transition: transform 0.5s ease;
+        }
+
+        &:hover img {
+            transform: rotate(90deg);
+            scale: 1.5;
+        }
+        
+        &:hover {
+            font-size: 1.3rem;
+        }
+    }
+
+}
