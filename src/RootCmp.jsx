@@ -17,6 +17,7 @@ import { UserMsg } from './cmps/UserMsg.jsx'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { Login } from './pages/Login.jsx'
 import { Signup } from './pages/Signup.jsx'
+import { AddDog } from './pages/AddDog.jsx'
 
 export function RootCmp() {
     return (
@@ -32,6 +33,7 @@ export function RootCmp() {
                         <Route path="vision" element={<AboutVision />} />
                     </Route>
                     <Route path="dog" element={<DogIndex />} />
+                    <Route path="add/dog" element={<AddDog />} />
                     <Route path="dog/:dogId" element={<DogDetails />} />
                     <Route path="user/:id" element={<UserDetails />} />
                     <Route path="review" element={<ReviewIndex />} />
@@ -43,7 +45,7 @@ export function RootCmp() {
                     </Route>
                 </Routes>
             </main>
-            <AppFooter />
+            {/* <AppFooter /> */}
         </div>
     )
 }

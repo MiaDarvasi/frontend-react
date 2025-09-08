@@ -7,7 +7,7 @@ import { dogService as remote } from './dog.service.remote'
 
 function getEmptyDog() {
 	return {
-		name: 'Mimi'
+		name: ''
 	}
 }
 

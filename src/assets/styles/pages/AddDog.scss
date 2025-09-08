@@ -1,0 +1,42 @@
+.add-dog {
+    margin-block-start: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+        display: flex;
+        place-items: center;
+        gap: 0.7rem;
+        max-width: fit-content;
+        margin: auto;
+
+        img {
+            max-height: 2rem;
+            transform: rotate(-20deg);
+        }
+    }
+
+    form {
+        max-width: fit-content;
+        margin: auto;
+        font-family: 'noto-light';
+
+        label {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    }
+
+    button {
+        font-size: 1.2rem;
+        font-family: 'noto-light';
+        margin-block: 2rem;
+        justify-self: center;
+
+        &:hover {
+            font-size: 1.3rem;
+        }
+    }
+}

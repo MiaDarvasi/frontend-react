@@ -13,13 +13,14 @@ import { DogCounter } from "../cmps/DogCounter"
 
 import plus from '../assets/imgs/icons/plus.svg'
 import paw from '../assets/imgs/icons/paw_orange_full.svg'
+import { useNavigate } from "react-router"
 
 
 export function HomePage() {
 
     const [filterBy, setFilterBy] = useState(dogService.getDefaultFilter())
     const dogs = useSelector(storeState => storeState.dogModule.dogs)
-    console.log(dogs)
+    const navigate = useNavigate()
 
     useEffect(() => {
         loadDogs(filterBy)
@@ -58,11 +59,16 @@ export function HomePage() {
         }
     }
 
+    function goToAddDog() {
+        navigate("/add/dog")
+    }
+
+
     return (
         <section dir="rtl" className="home-page">
-            <h1><img src={paw}/>פנסיון בהר</h1>
+            <h1><img src={paw} />פנסיון בהר</h1>
             <h2>ניהול ובקרת מידע על הכלבים שאצלנו בפנסיון</h2>
-            <button className="add-btn"> <img src={plus} /> <span>הוספת כלב חדש</span></button>
+            <button className="add-btn" onClick={goToAddDog}> <img src={plus} /> <span>הוספת כלב חדש</span></button>
             <DogCounter dogs={dogs} />
             <DogList
                 dogs={dogs}
