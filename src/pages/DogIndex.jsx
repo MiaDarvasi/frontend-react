@@ -28,16 +28,16 @@ export function DogIndex() {
         }
     }
 
-    async function onAddDog() {
-        const dog = dogService.getEmptyDog()
-        dog.age = prompt('Age?')
-        try {
-            const savedDog = await addDog(dog)
-            showSuccessMsg(`Dog added (id: ${savedDog._id})`)
-        } catch (err) {
-            showErrorMsg('Cannot add dog')
-        }        
-    }
+    // async function onAddDog() {
+    //     const dog = dogService.getEmptyDog()
+    //     dog.age = prompt('Age?')
+    //     try {
+    //         const savedDog = await addDog(dog)
+    //         showSuccessMsg(`Dog added (id: ${savedDog._id})`)
+    //     } catch (err) {
+    //         showErrorMsg('Cannot add dog')
+    //     }        
+    // }
 
     async function onUpdateDog(dog) {
         const age = +prompt('New age?', dog.age)
